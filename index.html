@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout3</title>
+    <style>
+      .container {
+        margin: 40px;
+        display: grid;
+        height: 90vh;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr 2fr 2fr 1fr;
+        grid-template-rows: 1fr 0.33fr 3fr 0.67fr;
+        grid-template-areas:
+        "hicon header header header header"
+        "banner banner banner banner banner"
+        "sidebar sidebar main main main"
+        "footer footer footer footer ficon";
+      }
+      .hicon {grid-area: hicon;}
+      .header {grid-area: header;}
+      .banner {grid-area: banner;}
+      .sidebar {grid-area: sidebar;}
+      .main {grid-area: main;}
+      .footer {grid-area: footer;}
+      .ficon {grid-area: ficon;}
+      .item {
+        display: grid;
+        place-items: center;
+        background-color: gold;
+        border: 0.5px solid black;
+        border-radius: 10px;
+        font-size: 25px;
+        font-weight: 400;
+      }
+      .hicon, .ficon {
+        border-radius: 50%
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item hicon">Icon</div>
+      <div class="item header">Header</div>
+      <div class="item banner">Banner</div>
+      <div class="item sidebar">Sidebar</div>
+      <div class="item main">Main</div>
+      <div class="item footer">Footer</div>
+      <div class="item ficon">Icon</div>
+    </div>
+  </body>
+</html>
